@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- fråga 1 -->
+    <h1 id="test" style="color:blue">This is Red</h1>
+
+    <!-- fråga 2 -->
+    <h2 id="demo"> welcoming</h2>
+
+    <!-- fråga 5 -->
+    <form name="my form">
+
+        <label for="text">Write a text bellow</label> <br>
+        <textarea name="pp" id="message" cols="30" rows="5"></textarea> <br><br>
+
+        <input type="button" value="Subbmit" onclick="logging()">
+
+
+    </form>
+
+    <script>
+        // fråga 1 
+        document.getElementById("test").style = "color:red"
+
+         // fråga 2 
+        function print()  {
+            document.getElementById("demo").innerHTML = "Hej"
+
+        }
+
+        print()
+
+        // fråga 3
+        function multiplication(numArrey) {
+
+            sum = 0
+
+            console.log(numArrey)
+
+            for (let x in numArrey) {
+                if (sum != 0) {
+                    sum *= numArrey[x]
+                }
+                else sum = numArrey[x]
+
+            }
+            console.log(sum)
+        
+        
+        }
+        const myArrey = [4, 2 , 6, 9, 5, 3]
+
+        multiplication(myArrey)
+
+        //fråga 4
+        function devide(num1, num2) {
+            sum = num1/num2
+
+            return sum
+        }
+
+        console.log(devide(8,4))
+
+
+        //fråga 5
+
+        function logging() {
+
+            let msg = document.getElementById("message").value
+
+            console.log(msg)
+
+        }
+
+
+
+    </script>
+</body>
+</html>
